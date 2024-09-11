@@ -52,7 +52,7 @@ func listTodo(filePath string) {
 // printTable is a helper function to print the CSV file into stdout with
 // proper formatting
 func printTable(records [][]string) {
-	colWidth := make([]int, len(records))
+	colWidth := make([]int, len(records[0]))
 
 	for _, record := range records {
 		for i, col := range record {
