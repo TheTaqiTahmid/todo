@@ -1,4 +1,4 @@
-module github.com/theTaqiTahmid/goTodo
+module github.com/theTaqiTahmid/todo
 
 go 1.23.0
 
