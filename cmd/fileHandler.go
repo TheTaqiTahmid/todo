@@ -10,6 +10,7 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
+	"strings"
 )
 
 // Main struct for representing the Todo data
@@ -120,8 +121,8 @@ func addTodo(filePath string, content []string) {
 	} else {
 		todo.index = linecount
 	}
-
-	todo.todo = content[0]
+  
+  todo.todo = strings.Join(content, " ")
 	todo.done = "false"
 
 	todoString := []string{strconv.Itoa(todo.index), todo.todo, todo.done}
