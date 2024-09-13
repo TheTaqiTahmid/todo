@@ -1,5 +1,6 @@
 # ToDo App Built with Golang
 
+This is a simple Todo CLI application written in golang.
 
 ## Implementation
 
