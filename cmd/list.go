@@ -10,6 +10,7 @@ import (
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list",
+  Aliases: []string{"ls"},
 	Short: "List todos",
 	Long: "List existing todos in tabular format",
 	Run: func(cmd *cobra.Command, args []string) {

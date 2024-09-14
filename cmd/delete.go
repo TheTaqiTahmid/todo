@@ -13,6 +13,7 @@ import (
 // deleteCmd represents the delete command
 var deleteCmd = &cobra.Command{
 	Use:   "delete",
+  Aliases: []string{"rm"},
 	Short: "Delete a todo by the index",
 	Long: `Delete a todo by the index`,
 	Run: func(cmd *cobra.Command, args []string) {

@@ -11,8 +11,9 @@ import (
 // addCmd represents the add command
 var addCmd = &cobra.Command{
 	Use:   "add",
+  Aliases: []string{"a"},
 	Short: "Add a new Todo",
-	Long: `Add a new Todo. The todo has to be wrapped around "" or ''`,
+	Long: `Add a new Todo to the list.`,
 	Run: func(cmd *cobra.Command, args []string) {
     addTodo(todoFileDir, args)
 	},

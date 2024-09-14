@@ -13,8 +13,9 @@ import (
 // updateCmd represents the update command
 var updateCmd = &cobra.Command{
 	Use:   "update",
+  Aliases: []string{"u"},
 	Short: "Update a todo",
-	Long: `Update a todo by index. The update string has to be wrapped around "" or ''`,
+	Long: `Update a todo by index.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		index, err := strconv.Atoi(args[0])
     if err != nil {
