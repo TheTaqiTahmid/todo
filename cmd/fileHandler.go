@@ -220,7 +220,7 @@ func markTodoAsDone(filePath string, index int) {
 }
 
 // updateTodo
-func updateTodo(filePath string, index int, todo string) {
+func updateTodo(filePath string, index int, todo []string) {
 	f, err := os.Open(filePath)
 	if err != nil {
 		log.Fatal(err)
@@ -250,7 +250,11 @@ func updateTodo(filePath string, index int, todo string) {
   defer writer.Flush()
 
 	recordToEdit := &recordArray[index-1]
-	recordToEdit.todo = todo
+  var todoString string
+  for _, str := range todo {
+    todoString += str + " "
+  }
+  recordToEdit.todo = todoString
 
   writer.Write(r[0])
 

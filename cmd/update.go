@@ -16,14 +16,11 @@ var updateCmd = &cobra.Command{
 	Short: "Update a todo",
 	Long: `Update a todo by index. The update string has to be wrapped around "" or ''`,
 	Run: func(cmd *cobra.Command, args []string) {
-    if len(args) > 2 {
-      log.Fatal("Too many input arguments")
-    }
 		index, err := strconv.Atoi(args[0])
     if err != nil {
       log.Fatal(err)
     }
-    updateTodo(todoFileDir, index, args[1])
+    updateTodo(todoFileDir, index, args[1:])
 	},
 }
 
